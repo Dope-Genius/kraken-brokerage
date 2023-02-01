@@ -1,0 +1,353 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content%}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- <style>
+  .navSticky {
+  position: fixed !important;
+  width: 100%;
+  background-color: #37517e;
+  box-shadow: 0 2px 2px rgb(0 0 0 / 11%);
+  z-index: 5000;
+}
+</style> -->
+
+<!-- About section -->
+<section class="about-hero">
+  <div class="about-hero-content">
+    <h1>About Us</h1>
+    <p>At Leeds Brokerage, we have been continuously transforming the traditional money management industry, in order to open the financial markets to everyone, everywhere</p>
+  </div>
+</section>
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FOREXCOM:SPXUSD",
+      "title": "S&P 500"
+    },
+    {
+      "proName": "FOREXCOM:NSXUSD",
+      "title": "Nasdaq 100"
+    },
+    {
+      "proName": "FX_IDC:EURUSD",
+      "title": "EUR/USD"
+    },
+    {
+      "proName": "BITSTAMP:BTCUSD",
+      "title": "BTC/USD"
+    },
+    {
+      "proName": "BITSTAMP:ETHUSD",
+      "title": "ETH/USD"
+    }
+  ],
+  "showSymbolLogo": false,
+  "colorTheme": "dark",
+  "isTransparent": false,
+  "displayMode": "regular",
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
+<div class="container padding-x padding-y">
+  <div class="timeline">
+    <div class="timelines">
+        <div class="badge"><p>2007</p></div>
+        <div class="panel">
+            <h3 class="timeline-title">Leeds Brokerage Born</h3>
+            <p>
+                We started operation with the mission: To make trading/Investment accessible to anyone, anywhere, and reduce dependency on traditional financial institutions
+            </p>
+        </div>
+    </div>
+    <div class="timelines">
+        <div class="badge"><p>2009</p></div>
+        <div class="panel">
+            <h3 class="timeline-title">Visual FX trading platform</h3>
+            <p>
+              The first iteration of Leeds Brokerage: An online trading platform that makes trading easy to understand
+            </p>
+        </div>
+    </div>
+    <div class="timelines">
+        <div class="badge"><p>2012</p></div>
+        <div class="panel">
+            <h3 class="timeline-title">WebTrader  & Investment</h3>
+            <p>
+              Leeds Brokerage launches its cutting-edge, intuitive investment platform, enabling anyone, anywhere to invest financial assets online. 
+            </p>
+        </div>
+    </div>
+    <div class="timelines">
+        <div class="badge"><p>2016</p></div>
+        <div class="panel">
+            <h3 class="timeline-title">Introducing CopyPortfolios (formerly known as CopyFunds)</h3>
+            <p>
+              A brand new long-term thematic investment product. CopyPortfolios are managed portfolios that bundle Top Traders or various assets under a predetermined market strategy. 
+            </p>
+        </div>
+    </div>
+    <div class="timelines">
+        <div class="badge"><p>2017</p></div>
+        <div class="panel">
+            <h3 class="timeline-title">Adding Cryptocurrencies Investment</h3>
+            <p>
+                After pioneering Bitcoin trading in 2013 via CFDs, Leeds Brokerage expanded its cryptocurrency offering, enabling clients to trade and invest in Ethereum, XRP (by Ripple Labs), Litecoin, and other popular cryptocurrencies
+            </p>
+        </div>
+    </div>
+    <div class="timelines">
+        <div class="badge"><p>2018</p></div>
+        <div class="panel">
+            <h3 class="timeline-title">US cryptocurrency trading platform</h3>
+            <p>
+              Leeds Brokerage begins Phase 1 of servicing the US market. Bringing US clients our unique offering in cryptocurrencies is only the beginning! Stay tuned for more to come…
+            </p>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="signature padding-x padding-y">
+  <div class="signature-note">
+    <p>Alongside commodities, currencies and other assets on Leeds Brokerage, a wide selection of stocks were added (and is ever-growing), enabling traders to diversify their portfolios even further and by investing in the global stock market.</p>
+  </div>
+
+  <div class="signature-details">
+    <div class="details-name">
+      <img src="https://leo-brokerage.com/media/sign-dark.png" alt="">
+      <p>Albert Duffo</p>
+    </div>
+    <p class="director">Director</p>
+  </div>
+</div>
+
+<section class="benefits padding-x padding-y">
+  <div class="benefits benefits-text-1">
+    <ul class="text-list">
+      <li>
+        <h3>What Are The Fees For Trading With Leverage?</h3>
+        <p>Overnight fees (also called rollover fees) are calculated using unified equations and will appear in the trade popup window before you set your order.</p>
+          <div></div>
+      </li>
+      <li>
+        <h3>Be part of something BIG!</h3>
+        <p>Promote the World’s Leading investment network. Partner up with us and our online community.</p>
+        <div></div>
+      </li>
+      <li>
+        <h3>Responsible Trading Policy</h3>
+        <p>Investment plans are made for you to follow and avoid being broke on a long run</p>
+        <div></div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="benefits benefits-image">
+    <img src="https://leo-brokerage.com/media/phone-screen-7.png" alt="">
+  </div>
+
+  <div class="benefits benefits-text-2">
+    <ul class="text-list">
+      <li>
+        <h3>Portfolio diversity</h3>
+        <p>Due to the increase of our client base, we are implimenting our MT4 and Trading platform</p>
+        <div></div>
+      </li>
+      <li>
+        <h3>Customer Service Center</h3>
+        <p>Search for answers to your questions in the knowledge base and submit questions and feedback directly to our team</p>
+        <div></div>
+      </li>
+      <li>
+        <h3>Profitable Weeks</h3>
+        <p>Shows what percentage of weeks, since this user started trading with Leeds Brokerage, have been profitable. A high Profitable Weeks rate shows consistency over time</p>
+        <div></div>
+      </li>
+  </ul>
+  </div>
+</section>
+
+<section class="trade-stocks">
+  <div class="trade-stocks-img">
+    <img src="https://leo-brokerage.com/media/travel/travel-2.svg" alt="">
+  </div>
+
+  <div class="trade-stocks-details">
+    <h2 class="general-heading">Trade and invest <br />in top stocks and ETFs.</h2>
+    <p>
+      Trade currency pairs, Indices and Commodities via CFDs. Investing in the financial markets has never been easier. buy and sell the underlying asset on Leeds Brokerage Cryptocurrency Trading Platform. 
+    </p>
+    <!-- <hr class="space-sm" /> -->
+    <ul class="icon-list">
+      <li>Broker regulated by 3 top-tier regulatory bodies</li>
+      <li>Low minimum deposit</li>
+      <li>Unlimited demo account</li>
+      <li>Wide choice of cryptoassets</li>
+    </ul>
+  </div>
+</section>
+
+<section class="steps padding-x padding-y">
+  <div class="step-heading">
+    <h2 class="general-heading center">Let's start with a bang.
+    </h2>
+
+    <p class="center">Join Leeds Brokerage today and invest in the Crypto and Forex market without paying commission. Zero-commission means that no broker fee will be charged when opening or closing the position and does not apply to short or leveraged positions.
+    </p>
+  </div>
+
+  <div class="box-steps">
+    <div class="step-item">
+        <span class="step-no">1</span>
+        <div class="step-line"></div>
+        <div class="content">
+            <h3>Create an account</h3>
+            <div>
+                <p>Your ease of mind is our top priority. Your account is secure with us
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="step-item">
+        <span class="step-no">2</span>
+        <div class="content">
+            <h3>Verify the account</h3>
+            <div>
+                <p>Verify the created account using the OTP sent to your email
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="step-item">
+        <span class="step-no">3</span>
+        <div class="content">
+            <h3>Start Investing</h3>
+            <div>
+                <p>Fund your account using Bitcoin. Get it approved and start your second income flow
+                </p>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Testimonials-slider -->
+<section class="testimonials padding-x padding-y">
+  <div class="swiper mySwiper">
+    <div class="testimonies swiper-wrapper">
+      <div class="testimony swiper-slide">
+        <div class="testimony-panel">
+          <p>Since i started investing with Leeds Brokerage, i have not had any regrets. </p>
+        </div>
+        <div class="testimony-details">
+          <p class="name">Robert Junior</p>
+          <div class="star">
+            &#9733 &#9733 &#9733 &#9733
+          </div>
+        </div>
+      </div>
+  
+      <div class="testimony swiper-slide">
+        <div class="testimony-panel">
+          <p>Leeds Brokerage has made life easy for me. I had previously lost hope in cypto investment but now am glad am an investor.</p>
+        </div>
+        <div class="testimony-details">
+          <p class="name">Joan Manson</p>
+          <div class="star">
+            &#9733 &#9733 &#9733 &#9733
+          </div>
+        </div>
+      </div>
+  
+      <div class="testimony swiper-slide">
+        <div class="testimony-panel">
+          <p>Leeds Brokerage thanks for the opportunity giving to me. I have not had any problems getting paid.</p>
+        </div>
+        <div class="testimony-details">
+          <p class="name">Jessica Porter</p>
+          <div class="star">
+            &#9733 &#9733 &#9733 &#9733
+          </div>
+        </div>
+      </div>
+  
+      <div class="testimony swiper-slide">
+        <div class="testimony-panel">
+          <p>Fastest payout i have ever seen so far. am am glad i invested as at when i should.</p>
+        </div>
+        <div class="testimony-details">
+          <p class="name">Richard Oyster</p>
+          <div class="star">
+            &#9733 &#9733 &#9733 &#9733
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div> -->
+
+  </div>
+</section>
+
+<!-- Contact Prompt -->
+<section class="contact padding-x padding-y">
+  <div class="caption">
+    <div class="caption-text">
+      <h2 class="main-heading">Do you have any question ?</h2>
+      <p>
+          Due to a high increase in the volume of requests, our response time may be extended. Please note that currently it may take up to 7 days for us to get back to you. We are working to handle all inquiries as quickly as possible and thank you for your patience and understanding during this time.
+      </p>
+    </div>
+    <div class="caption-btn">
+      <a href="{% url 'signup' %}" class="btn btn-circle btn-sm">Contact</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+    },
+  });
+</script>
+
+
+</body>
+
+{% endblock %}

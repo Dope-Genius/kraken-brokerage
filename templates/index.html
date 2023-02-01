@@ -1,0 +1,219 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content%}
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <title>Leeds Brokerage</title>
+</head>
+
+<div class="hero padding-x padding-y">
+  <div class="hero__content">
+    <div class="hero__info">
+      <h1 class="hero__info__heading">
+        Invest with confidence on the world's leading social trading platform.
+      </h1>
+
+      <p class="hero__info__details">
+        Join millions who've already discovered smarter investing by trusting us the leading traders in our community, start today to earn a second income
+      </p>
+
+      <a href="{% url 'signup' %}" class="hero-btn">Get Started</a>
+    </div>
+
+    <div class="hero__image">
+      <div class="hero__visuals">
+        <img src="https://leo-brokerage.com/media/photo-1.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Trading View -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FOREXCOM:SPXUSD",
+      "title": "S&P 500"
+    },
+    {
+      "proName": "FOREXCOM:NSXUSD",
+      "title": "Nasdaq 100"
+    },
+    {
+      "proName": "FX_IDC:EURUSD",
+      "title": "EUR/USD"
+    },
+    {
+      "proName": "BITSTAMP:BTCUSD",
+      "title": "BTC/USD"
+    },
+    {
+      "proName": "BITSTAMP:ETHUSD",
+      "title": "ETH/USD"
+    }
+  ],
+  "showSymbolLogo": false,
+  "colorTheme": "light",
+  "isTransparent": false,
+  "displayMode": "regular",
+  "locale": "en"
+}
+  </script>
+</div>
+
+<section class="world padding-x padding-y">
+  <h2 class="main-heading center">Partnering with the world's leaders</h2>
+  <p class="country-group center">South America | Southern Asia | Southern Europe | Eastern Asia | Eastern Europe | Western Asia | South-eastern Asia | Western Europe | Northern Europe | Australia and New Zealand | Western Africa | Northern America</p>
+
+  <div class="map-countries">
+    <div class="map">
+      <img src="https://leo-brokerage.com/media/map.png" alt="">
+    </div>
+
+    <div class="countries-listed">
+      <ul class="lists list-1">
+        <li>New York, United States</li>
+        <li>San Francisco, United States</li>
+        <li>Chicago, United States</li>
+        <li>New Delhi, India</li>
+        <li>Lima, Peru</li>
+        <li>Milan, Italy</li>
+        <li>London, United Kingdom</li>
+        <li>Amsterdam, Netherlands</li>
+        <li>Paris, France</li>
+        <li>Sidney, Australia</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section class="information padding-x padding-y">
+  <div class="information-group">
+    <div class="information-group-list">
+      <ul class="lists list-2">
+        <li>Simplicity</li>
+        <li>innovation</li>
+        <li>Enjoyable</li>
+        <li>Openness</li>
+        <li>Quality</li>
+      </ul>
+    </div>
+
+
+    <div class="information-group-details">
+      <h2 class="main-heading">
+        Best Methods<br>
+        99% Guarantee
+      </h2>
+
+      <p>Why pay fees when you don’t have to?We invest in a large variety of stocks on Leeds Brokerage without paying any markups, ticketing or management fees. There are no limits on trading volume either. We don't recycle investments. We simply trade and profit from the market.
+      </p>
+    </div>
+  </div>
+
+  <div class="info-features">
+    <div class="info-feature" data-aos="fade-up" data-aos-duration="500">
+      <h3 class="feature-heading">Trading Hours</h3>
+      <p>Different instruments have different opening and closing times, but with us it's 24/7</p>
+    </div>
+
+    <div class="info-feature" data-aos="fade-up" data-aos-duration="1000">
+      <h3 class="feature-heading">Global Support</h3>
+      <p>We have one of the best support to attend to you when ever.
+      </p></div>
+
+    <div class="info-feature" data-aos="fade-up"  data-aos-duration="2000">
+      <h3 class="feature-heading">Stocks</h3>
+      <p>On rear occasion, we invest in stocks for our long term investors.</p>
+    </div>
+
+    <div class="info-feature" data-aos="fade-up" data-aos-duration="3 000">
+      <h3 class="feature-heading">Bitcoin</h3>
+      <p>As the number one cyptocurrency, we majorly trade and invest on it.</p>
+    </div>
+    
+  </div>
+</section>
+
+<section class="statistics padding-x padding-y">
+  <div class="statistics-detail">
+    <h2 class="main-heading" style="color: white">Up to the mountain<br>is where our numbers bring us.</h2>
+    
+    <p>A brand new long-term thematic investment product. CopyPortfolios are managed portfolios that bundle Top Traders or various assets under a predetermined market strategy. Most CopyPortfolios are driven by powerful machine-learning engines which aim to generate a maximum return at any given time.</p>
+  </div>
+
+
+  <div class="statistics-chart">
+    <div class="stat-chart">
+      <h3>Stock Market Investment</h3>
+      <p class="stat-percent thirty">30 %</p> 
+      <div class="bg">
+        <div class="line"></div>
+      </div>
+    </div>
+
+    <div class="stat-chart">
+      <h3>Security</h3>
+      <p class="stat-percent hundred">99%</p> 
+      <div class="bg">
+        <div class="line line-2"></div>
+      </div>
+    </div>
+
+    <div class="stat-chart">
+      <h3>Cryptocurrency Trade</h3>
+      <p class="stat-percent sixty">60 %</p> 
+      <div class="bg">
+        <div class="line line-3"></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- TradingView Widget BEGIN --> 
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FOREXCOM:SPXUSD",
+      "title": "S&P 500"
+    },
+    {
+      "proName": "FOREXCOM:NSXUSD",
+      "title": "Nasdaq 100"
+    },
+    {
+      "proName": "FX_IDC:EURUSD",
+      "title": "EUR/USD"
+    },
+    {
+      "proName": "BITSTAMP:BTCUSD",
+      "title": "BTC/USD"
+    },
+    {
+      "proName": "BITSTAMP:ETHUSD",
+      "title": "ETH/USD"
+    }
+  ],
+  "showSymbolLogo": false,
+  "colorTheme": "dark",
+  "isTransparent": false,
+  "displayMode": "regular",
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
+
+{% endblock %}

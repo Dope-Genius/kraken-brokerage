@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content%}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/sign.css' %}">
+
+<section class="about-hero">
+  <div class="about-hero-content">
+    <h1>Register</h1>
+    <p>Home | Register Page</p>
+  </div>
+</section>
+
+
+<div class="fancy-bg">
+  <div class="form signup" action = "{% url 'signup' %}">
+    <form id="sign-up" action="" method="POST" >
+      {% csrf_token%}
+      <!-- {% include '_alert.html' %} -->
+
+      <div class="contact-group">
+        <div class="contact-category contact-category-1">
+          {% include '_alert.html' %}
+
+          <h2>Personal Information</h2>
+  
+          <div class="form-group">
+            <input type="text" name="first_name" placeholder="First Name" required>
+  
+            <input type="text" name="last_name" placeholder="Last Name" required>
+      
+            <input type="email" name="email" placeholder="Email" required>
+      
+          </div>
+        </div>
+  
+        <div class="contact-category">
+          <h2>Additional Information</h2>
+          
+          <div class="form-group">
+            <input type="text" name="country" placeholder="Country" required>
+  
+            <input type="password" name="password" id="password" placeholder="Password" required>
+  
+            <input type="password" name="password2" id="password2" placeholder="Confirm Password"  required>
+          </div>
+        </div>
+      </div>
+
+      <div class="terms">
+        <input type="checkbox" required>
+        <p class="tandc">I agree to the term and conditions</p>
+      </div>
+
+      <p class="privacy">(*) We will never share your personal information with third parties.</p>
+
+      <input id="form-btn" class="form-btn" type="submit" value="Sign Up Now">
+
+      <!-- <p style="font-size: 1.4rem; margin-top: 10px; ">already have an account? <a href="{% url 'signin' %}">Login</a></p> -->
+    </form>
+  </div>
+</div>
+
+
+{% endblock %}

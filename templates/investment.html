@@ -1,0 +1,153 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block content%}
+<link rel="stylesheet" href="{% static 'css/dashboard2.css' %}">
+
+<section class="">
+  <form action="investment" method="POST" class="dash-card-group">
+    {% csrf_token%}
+    {% if user.is_authenticated %}
+      <input type="hidden" name="username" value="{{ user.username }}">
+    {% endif %}
+  <div class="dash-card dash-card--form">
+    <p class="dash-card-heading">Select Plan</p>
+    
+    <div class="dash-card-content">
+      {% include '_alert.html' %}
+      <div class="form">
+        <div class="form-group">
+          <div class="form-input-text">
+            <input type="number" name="amount" id="invest-amt" placeholder="Enter Amount" min="100" max="999" required>
+          </div>
+
+          <label for="method">Select Method</label>
+          <select name="deposit_type" class="payType">
+            <option value="Crypto Mining">Crypto Mining</option>
+            <option value="Fund Growth">Fund Growth </option>
+            <option value="Speedex Capitals">Speedex Capitals</option>
+          </select>
+        </div>
+      </div>
+      <p class="text instruction" style="margin: 4rem 0;">
+        Current balance: $0.00<br>
+        In Leeds Brokerage - Your Trusted Crypto Investment Broker, you will receive profit every day, including weekends.
+      </p>
+    </div>
+  </div>
+
+  <div class="dash-card  dash-card--wallet">
+    <p class="dash-card-heading">Plan Details</p>
+    <div class="dash-card-content">
+
+      <ul class="plan-details-list">
+        <li>
+          Time: <strong>2 days</strong>
+        </li>
+        <li>
+          Total Profit: <strong>10%</strong>
+        </li>
+        <li>
+          Min: <strong>$100</strong>
+        </li>
+        <li>
+          Max: <strong>$999</strong>
+        </li>
+      </ul>
+      <!-- <a href="" class="copy-btn">Start Investment</a> -->
+      <input type="submit" class="copy-btn" value="Start Investment">
+    </div>
+  </div>
+  </form>
+</section>
+
+<script>
+  const payType = document.querySelector('.payType');
+  const detailsList = document.querySelector('.plan-details-list');
+  const investAmt = document.querySelector('#invest-amt');
+
+  
+
+  payType.addEventListener("change", function(){
+    // alert(this.value)
+    if (this.value == 'Fund Growth'){
+      investAmt.setAttribute("min", "1000");
+      investAmt.setAttribute("max", "4999");
+
+      detailsList.innerHTML = `
+        <li>
+          Time: <strong>3 days</strong>
+        </li>
+        <li>
+          Total Profit: <strong>22.5%</strong>
+        </li>
+        <li>
+          Min: <strong>$1,000</strong>
+        </li>
+        <li>
+          Max: <strong>$4,999</strong>
+        </li>
+    `
+    } else if (this.value == 'Speedex Capitals'){
+      investAmt.setAttribute("min", "5000");
+      investAmt.setAttribute("max", "100000");
+
+      detailsList.innerHTML = `
+      <li>
+          Time: <strong>4 days</strong>
+        </li>
+        <li>
+          Total Profit: <strong>40%</strong>
+        </li>
+        <li>
+          Min: <strong>$5,000</strong>
+        </li>
+        <li>
+          Max: <strong>$100,000</strong>
+        </li>
+      `
+    } else {
+      investAmt.setAttribute("min", "100");
+      investAmt.setAttribute("max", "999");
+
+      detailsList.innerHTML = `
+      <li>
+          Time: <strong>2 days</strong>
+        </li>
+        <li>
+          Total Profit: <strong>10%</strong>
+        </li>
+        <li>
+          Min: <strong>$100</strong>
+        </li>
+        <li>
+          Max: <strong>$999</strong>
+        </li>
+      `
+    }
+  })
+
+  console.log()
+</script>
+
+<!-- <script>
+  const copyBtn = document.querySelector('.copy-btn');
+  copyBtn.addEventListener('click', copyAddress);
+
+  function copyAddress() {
+  
+  /* Get the text field */
+  var copyText = document.querySelector(".wallet-address");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+}
+</script> -->
+{% endblock %}

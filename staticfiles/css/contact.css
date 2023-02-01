@@ -1,0 +1,136 @@
+.about-hero {
+  background-image: url(https://leo-brokerage.com/media/aboutt.png);
+  background-attachment: fixed;
+  color: white;
+}
+
+/* .about-hero-content {
+  padding: 12rem 10rem;
+} */
+
+.about-hero-content h1 {
+  font-size: 4.5rem;
+  font-weight: 500;
+  color: black;
+}
+
+.about-hero-content p {
+  font-size: 1.5rem;
+  line-height: 2;
+  max-width: 570px;
+  color: black;
+}
+
+
+/* question */
+.question {
+  display: flex;
+  justify-content: space-between;
+}
+
+.question-text p {
+  font-size: 1.7rem;
+  color: var(--text-2);
+  margin-bottom: 3rem;
+}
+
+.question-img {
+  flex: 0 0 50%;
+}
+
+
+.question-img img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 900px){
+  .question {
+    display: block;
+  }
+
+  .question-text {
+    margin-bottom: 4rem;
+  }
+}
+
+/* Question Group */
+.question-group {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F1F5F7;
+}
+
+.contact-form {
+  flex: 0 0 65%;
+  margin-right: 2rem;
+}
+
+.input-text {
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  background: rgb(255, 255, 255);
+  font-family: inherit;
+  margin-bottom: 2rem;
+  border: 1px solid var(--text-2);
+}
+
+.input-textarea {
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  background: rgb(255, 255, 255);
+  height: 100px;
+  border: 1px solid var(--text-2);
+  font-family: inherit;
+}
+
+.btn-circle {
+  font-family: inherit;
+  outline: none;
+  border: none;
+}
+
+.contact-text .support {
+  font-size: 1.7rem;
+  color: var(--text-2);
+  margin-bottom: 3rem;
+}
+
+.contact-list li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  color: var(--text-2);
+  margin-bottom: 1rem;
+}
+
+.contact-list .tag {
+  color: var(--text);
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 900px){
+  .question-group {
+    display: block;
+  }
+
+  .contact-form {
+    margin-right: 0;
+    margin-bottom: 6rem;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .contact-list li {
+    display: block;
+  }  
+}

@@ -1,0 +1,147 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block content%}
+<div class="referral-card">
+  <div class="close-btn">
+    <i class="bi bi-x-lg"></i>
+  </div>
+  
+  <h3>Referral Link</h3>
+  <p>https://www.leedsbrokerage.com?ref={{user.last_name}}%{{user.first_name}}</p>
+</div>
+
+<div class="deposit-card">
+  <a href="{% url 'deposit' %}">DEPOSIT FUND</a>
+</div>
+
+<div class="balances">
+  <div class="balance balance-1">
+    <div class="balance-details">
+      <div class="balance-type">Available Balance</div>
+      <div class="balance-amount">
+        {% if user.balance.available_balance == "" %} 
+        $0.00
+        {% else %}
+        ${{user.balance.available_balance}}
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="balance-icon">
+      <i class="bi bi-currency-dollar"></i>
+    </div>
+  </div>
+  
+  <div class="balance balance-2">
+    <div class="balance-details">
+      <div class="balance-type">Total Deposit</div>
+      <div class="balance-amount">
+        {% if user.balance.available_balance == "" %} 
+        $0.00
+        {% else %}
+        ${{user.balance.total_deposit}}
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="balance-icon">
+      <i class="bi bi-currency-dollar"></i>
+    </div>
+  </div>
+
+  <div class="balance balance-3">
+    <div class="balance-details">
+      <div class="balance-type">Total Withdrawal</div>
+      <div class="balance-amount">
+        {% if user.balance.available_balance == "" %} 
+        $0.00
+        {% else %}
+        ${{user.balance.total_withdrawal}}
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="balance-icon">
+      <i class="bi bi-currency-dollar"></i>
+    </div>
+  </div>
+
+  <div class="balance balance-4">
+    <div class="balance-details">
+      <div class="balance-type">PENDING DEPOSIT</div>
+      <div class="balance-amount">
+        {% if user.balance.available_balance == "" %} 
+        0
+        {% else %}
+        ${{user.balance.pending_deposit}}
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="balance-icon">
+      <i class="bi bi-currency-dollar"></i>
+    </div>
+  </div>
+</div>
+
+<div class="section dash-cards">
+  <div class="dash-card dash-card-widget">
+    {% include '_alert.html' %}
+
+    <p class="card-type">market-overview</p>
+    <div class="widget">
+      <!-- TradingView Widget BEGIN -->
+      <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+      <script type="text/javascript">
+          new TradingView.widget( {
+              "width": '100%',
+              "height": '430px',
+              "symbol": "COINBASE:BTCUSD",
+              "interval": "1",
+              "timezone": "Etc/UTC",
+              "theme": "dark",
+              "style": "2",
+              "locale": "en",
+              "toolbar_bg": "#f1f3f6",
+              "enable_publishing": false,
+              "hide_legend": true,
+              "allow_symbol_change": true,
+              "save_image": false,
+              "container_id": "tradingview_df6a8"
+          } );
+      </script>
+      <!-- TradingView Widget END -->
+    </div>
+  </div>
+
+  <div class="dash-card dash-card-promo">
+
+    <p class="card-type">Promo Plan</p>
+    <div class="widget">
+      <p>Hey dear Big investor! Wouldn't you like to come in on our extremely accurate AI driven trade stratergy? We guarantee 86.70% yeilds if you enter at a minimum of $2000.00. THIS IS A TIME LIMITED OFFER</p>
+
+      <p class="mb-0">
+          Time: <strong>72 Hours</strong>
+          <br>
+          Profit: <strong>85%</strong>
+          <br>
+          Min: <strong>$2000</strong>
+          <br>
+          Max: <strong>$20000</strong>
+          <br>
+          Current Balance: <strong>$0</strong>       
+      </p>
+
+      <form method="POST" action="{% url 'dashboard' %}">
+        {% csrf_token %}
+        <div class="form-group">
+          <input type="number" name="amount" placeholder="Enter Amount" required>
+        </div>
+
+        <input name="submit" value="Activate Promo" type="submit" class="copy-btn">
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

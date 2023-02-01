@@ -1,0 +1,198 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/d206b6bfc8.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <title>Leeds Brokerage | Dashboard</title>
+
+  <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="678b282f-a79b-47f0-a582-241bf8c11d67";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+</head>
+
+<body>
+  <div class="main">
+    <div class="nav hidenav">
+      <div class="nav-logo">
+        <a href="{% url 'dashboard' %}"><img src="https://i.ibb.co/N96m9b1/leeds-white-02.png" alt="leeds-white-02" border="0"></a>
+      </div>
+
+      <div class="nav-links">
+        <ul>
+          <li class="nav-link dash-link">
+            <a href="{% url 'dashboard' %}">
+              <i class="bi bi-speedometer2"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+
+          <li class="nav-link">
+            <a href="{% url 'deposit' %}">
+              <i class="bi bi-arrow-bar-up"></i>
+              <p>Deposit Funds</p>
+            </a>
+          </li>
+
+          <li class="nav-link">
+            <a href="{% url 'withdraw' %}">
+              <i class="bi bi-arrow-clockwise"></i>
+              <p>Withdraw Funds</p>
+            </a>
+          </li>
+
+          <li class="nav-link">
+            <a href="{% url 'transaction' %}">
+              <i class="bi bi-arrow-clockwise"></i>
+              <p>Transaction Log</p>
+            </a>
+          </li>
+
+          <li class="nav-link">
+            <a href="{% url 'investment' %}" class="dark-link">
+              <i class="bi bi-cash"></i>
+              <p>Investments</p>
+            </a>
+          </li>
+
+          <li class="nav-link">
+            <a href="{% url 'notification' %}"  class="dark-link">
+              <i class="bi bi-envelope-fill"></i>
+              <p>Notification</p>
+            </a>
+          </li>
+
+          <li class="nav-link">
+            <a href="{% url 'support-ticket' %}" class="dark-link">
+              <i class="bi bi-speedometer2"></i>
+              <p>Support Ticket</p>
+            </a>
+          </li>
+
+          <li class="nav-link">
+            <a href="{% url 'referrals' %}" class="dark-link">
+              <i class="bi bi-people-fill"></i>
+              <p>Referral</p>
+            </a>
+          </li>
+
+          <li class="nav-link">
+            <a href="{% url 'profile' %}" class="dark-link">
+              <i class="bi bi-arrow-bar-up"></i>
+              <p>Profile</p>
+            </a>
+          </li>
+
+          <li class="nav-link">
+            <a href="{% url 'logout' %}" class="dark-link">
+              <i class="bi bi-box-arrow-right"></i>
+              <p>Logout</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <main class="content">
+      <div class="content-header">
+        <div class="nav-list">
+          <i class="bi bi-list"></i>
+        </div>
+
+        <div class="nav-details">
+          <div class="language">
+            <div id="google_translate_element"></div>
+          </div>
+          <a href="{% url 'notification' %}">
+            <div class="mail-icon">
+              <i class="bi bi-envelope-fill"></i>
+              <p class="mail-count">{{ notify_count.all|length }}</p>
+            </div>
+          </a>
+
+          <div class="nav-details-name">{{ user.first_name }}</div>
+
+          <div class="tooltip">
+            <ul class="tool-list">
+              <li>
+                <a href="{% url 'profile' %}">
+                  <i class="bi bi-person-fill"></i>
+                  Profile
+                </a>
+              </li>
+              <li>
+                <a href="{% url 'transaction' %}">
+                  <i class="bi bi-list-ul"></i>
+                  Transaction Log
+                </a>
+              </li>
+              <li>
+                <a href="{% url 'logout' %}">
+                  <i class="bi bi-box-arrow-right"></i>
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard">
+        {% block content %} {% endblock %}
+      </div>
+
+      <div class="close-btn"></div>
+
+      <footer>
+        <p>2022 Leeds Brokerage - Your Trusted Crypto Investment Broker | All Rights Reserved</p>
+      </footer>
+    </main>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="{% static 'js/dash.js' %}"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+  }
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+function googleTranslateElementInit() {
+new google.translate.TranslateElement(
+      {pageLanguage: 'en'},
+      'google_translate_element'
+  );
+
+// Native (but only works in browsers that support query selector)
+if(typeof(document.querySelector) == 'function') {
+  document.querySelector('.goog-logo-link').setAttribute('style', 'display: none');
+  document.querySelector('.goog-te-gadget').setAttribute('style', 'font-size: 0');
+}
+
+// If you have jQuery - works cross-browser - uncomment this
+jQuery('.goog-logo-link').css('display', 'none');
+jQuery('.goog-te-gadget').css('font-size', '0');
+}
+</script>
+  <!-- <script>
+    navName.addEventListener('click', function(){
+    const tooltip = document.querySelector('.tooltip')
+    console.log(tooltip)
+    tooltip.classList.toggle('block')
+    })
+  </script> -->
+
+</body>
+</html>

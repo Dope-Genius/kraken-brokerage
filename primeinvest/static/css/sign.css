@@ -1,0 +1,176 @@
+.about-hero {
+  background-image: url(https://leo-brokerage.com/assets/img/breadcrumb-bg.jpg);
+  background-attachment: fixed;
+  color: white;
+}
+
+/* .about-hero-content {
+  padding: 12rem 10rem;
+} */
+
+.about-hero-content h1 {
+  font-size: 4.5rem;
+  font-weight: 500;
+  color: white;
+}
+
+.about-hero-content p {
+  font-size: 1.5rem;
+  line-height: 2;
+  max-width: 570px;
+  color: white;
+}
+
+
+/* Contact Form */
+
+.fancy-bg {
+  background: linear-gradient(-19deg, #267c82 10%, #166286);
+  color: white;
+  margin: 6rem 2rem;
+  border-radius: 2rem;
+  padding: 3rem;
+  /* max-width: 1200px; */
+}
+
+.contact-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-group > * {
+  flex: 0 0 48%;
+}
+
+.contact-category h2 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.form-group input {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  background: transparent;
+  padding: 0 30px;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease-in;
+  height: 50px;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  color: white;
+  font-family: inherit;
+}
+
+.form-group label {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: -1rem;
+}
+
+.form-group input::placeholder {
+  color: white;
+}
+
+
+.terms  {
+  display: flex;
+  font-size: 1.6rem;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.privacy {
+  font-size: 1.6rem;
+}
+
+.form-btn {
+  letter-spacing: 0.5px;
+  background: #fff;
+  background: linear-gradient(-19deg, #166286 10%, #267c82);
+  margin-right: 0;
+  padding: 0 40px;
+  height: 50px;
+  line-height: 46px;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  margin: 2rem 0;
+}
+
+/* Signin */
+.remember {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fancy-bg-2 {
+  max-width: 40rem;
+  margin: 6rem auto;
+}
+@media only screen and (max-width: 800px){
+  .contact-group {
+    display: block;
+  }
+
+  .contact-category-1 {
+    margin-bottom: 2rem;
+  }
+}
+
+.form-image {
+  display: flex;
+  justify-content: center;
+  padding: 10rem;
+}
+
+.fancy-bg-2 {
+  flex: 0 0 50%;
+  margin: 0;
+  padding: 2rem;
+  border-radius: 0;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+.visual {
+  flex: 0 0 50%;
+}
+
+.visual {
+  background-image: url(https://leo-brokerage.com/assets/img/login-bg.jpg);
+  background-size: cover;
+  flex: 0 0 50%;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+
+  /* width: 100%;
+  height: 100%; */
+  /* background-repeat: no-repeat; */
+}
+
+@media only screen and (max-width: 1000px){
+  .fancy-bg {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .form-image {
+    display: block;
+    padding: 8rem 2rem !important;
+  }
+  .visual {
+    display: none;
+  }
+
+  .fancy-bg-2 {
+    border-radius: 2rem;
+    margin: 0;
+  }
+}

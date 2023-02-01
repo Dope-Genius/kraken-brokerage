@@ -1,0 +1,392 @@
+.about-hero {
+  background-image: url(https://leo-brokerage.com/media/mainabout.png);
+  background-attachment: fixed;
+  color: white;
+}
+
+.about-hero-content {
+  padding: 12rem 10rem;
+}
+
+.about-hero-content h1 {
+  font-size: 4.5rem;
+  font-weight: 500;
+}
+
+.about-hero-content p {
+  font-size: 1.5rem;
+  line-height: 2;
+  max-width: 570px;
+}
+
+@media only screen and (max-width: 900px){
+  .about-hero-content {
+    padding: 12rem 6rem;
+  }
+}
+@media only screen and (max-width: 500px){
+  .about-hero-content {
+    padding: 12rem 4rem;
+  }
+}
+
+/* Timeline */
+
+.timeline {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem 2rem;
+}
+
+.timelines {
+}
+
+.timeline .badge p {
+  font-weight: 500;
+  margin: 30px 0 5px 0;
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+
+.timeline .panel {
+  width: auto;
+  padding: 2rem;
+  border-radius: 3px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(241, 240, 240);
+  box-shadow: 0 3px 20px -2px rgb(20 45 100 / 10%);
+}
+
+.timeline-title {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.panel p {
+  font-size: 1.7rem;
+  line-height: 1.8;
+  color: var(--text-2);
+  margin-top: 2rem;
+}
+
+@media only screen and (max-width: 900px){
+  .timeline {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .timeline {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem 2rem;
+  }
+}
+
+/* signature */
+.signature {
+  background-color: #F1F5F7;
+  display: flex;
+  justify-content: space-between;
+}
+
+.signature-note {
+  font-size: 1.7rem;
+  color: var(--text-2);
+  line-height: 1.8;
+  flex: 0 0 70%;
+}
+
+.details-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details-name p {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.director {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 900px){
+  .signature {
+    display: block;
+  }
+
+  .signature-details {
+    max-width: 15rem;
+    margin-top: 4rem;
+  }
+}
+
+/* Benefits */
+.benefits {
+  background-color: #F1F5F7;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.text-list li {
+  margin: 4rem 0;
+  list-style: none;
+}
+
+.text-list h3 {
+  font-size: 1.8rem;
+  color: var(--text);
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.text-list p {
+  font-size: 1.7rem;
+  color: var(--text-2);
+}
+
+.benefits-text-1 {
+  text-align: right;
+}
+
+.benefits-image {
+  margin: 0 2rem;
+  text-align: center;
+  min-width: 31rem;
+}
+
+.benefits-image img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 900px){
+  .benefits {
+    display: flex;
+    display: block;
+  }
+
+  .benefits-text-1 {
+    text-align: left;
+  }
+}
+
+/* Trade Stocks */
+
+.trade-stocks {
+  display: flex;
+  justify-content: space-between;
+  padding: 8rem 10rem 8rem 0;
+}
+
+.trade-stocks-img img {
+  width: 100%;
+}
+
+/* Generel Heading */
+.general-heading {
+  font-size: 3rem;
+  color: var(--text);
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.trade-stocks-details {
+  flex: 0 0 50%;
+}
+
+.trade-stocks-details p {
+  font-size: 1.7rem;
+  color: var(--text-2);
+  margin-bottom: 3rem;
+}
+
+.icon-list {
+  font-size: 1.7rem;
+  color: var(--text-2);
+  line-height: 2;
+}
+.center {
+  text-align: center;
+}
+
+@media only screen and (max-width: 900px){
+  .trade-stocks {
+    display: block;
+    padding: 2rem;
+  }
+}
+
+
+/* Steps */
+.steps {
+  background-color: #F1F5F7;
+}
+
+.step-heading p {
+  font-size: 1.7rem;
+  color: var(--text-2);
+  margin: 3rem auto;
+  margin-bottom: 3rem;
+  max-width: 650px;
+}
+
+.box-steps {
+  display: flex;
+  justify-content: space-between;
+}
+
+.step-item {
+  flex: 0 0 30%;
+  position: relative;
+}
+
+.step-no {
+  background-color: white;
+  width: 3.2rem;
+  height: 3.2rem;
+  display: block;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 14px;
+  display: block;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.step-item:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: .5px;
+  top: 14px;
+  background-color: var(--text-2);
+  /* z-index: ; */
+}
+
+
+.step-item h3 {
+  font-size: 2rem;
+  color: var(--text);
+  margin: 2rem 0;
+  font-weight: 500;
+}
+
+.step-item p {
+  font-size: 1.6rem;
+  color: var(--text-2);
+}
+
+@media only screen and (max-width: 700px){
+  .box-steps {
+    display: block;
+  }
+
+  .step-item {
+    margin-bottom: 4rem;
+    position: relative;
+  }
+
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #F1F5F7;
+}
+
+.testimony-panel {
+  padding: 2rem;
+  background-color: white;
+  font-size: 1.6rem;
+  color: var(--text-2);
+  font-weight: 400;
+  position: relative;
+}
+
+.testimony-panel::after {
+  position: absolute;
+  bottom: -18px;
+  left: 30px;
+  content: '';
+  display: block;
+  border-width: 20px;
+  width: 4rem;
+  height: 4rem;
+  background-color: white;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.testimony-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  font-size: 1.4rem;
+}
+
+.testimony-details .name {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.star {
+  color: #d0bf07;
+}
+
+/* Contact Section */
+.contact {
+  background-color: #F1F5F7;
+}
+
+.caption {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 2rem;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.caption-btn {
+  flex: 0 0 30%;
+  text-align: center;
+}
+
+.caption-text p {
+  font-size: 1.6rem;
+  color: var(--text-2);
+}
+
+.btn-circle {
+  background-color: var(--blue);
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 900px){
+  .caption {
+    display: block;
+  }
+
+  .btn-circle {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 2rem auto;
+  }
+}

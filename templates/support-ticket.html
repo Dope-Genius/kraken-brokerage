@@ -1,0 +1,35 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block content%}
+<link rel="stylesheet" href="{% static 'css/dashboard2.css' %}">
+
+<section class="dash-card-group">
+  <div class="dash-card dash-card--transaction">
+    <p class="dash-card-heading">Transaction Log</p>
+    <div class="dash-card-content">
+      {% include '_alert.html' %}
+      <div class="form">
+        <div class="form-group">
+          <!-- support-ticket -->
+          <form method="POST" action="{% url 'support-ticket' %}">
+            {% csrf_token%}
+            {% if user.is_authenticated %}
+              <input type="hidden" name="username" value="{{ user.username }}">
+            {% endif %}
+
+            <label for="title">Title</label>
+            <input type="text" name="title" placeholder="Subject">
+  
+            <label for="method">Message</label>
+            <textarea type="text" name="message" class="text-area" placeholder="Message" required></textarea> <br><br>
+            
+            <input type="submit" class="copy-btn" value="Submit Ticket">
+          </form>
+          <!-- end -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

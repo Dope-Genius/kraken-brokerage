@@ -1,0 +1,40 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block content%}
+<link rel="stylesheet" href="{% static 'css/dashboard2.css' %}">
+
+<section class="dash-card-group">
+  <div class="dash-card dash-card--transaction">
+    <p class="dash-card-heading">Investment History</p>
+    <div class="dash-card-content">
+      <div class="notifications">
+        
+      {% for notification in notify %}
+        <div class="notification">
+          <div class="alert-heading">{{ notification.heading }}</div>
+          <p class="alert-date">{{ notification.date }}</p>
+          <p class="alert-details">{{ notification.message }}</p>
+          <!-- <p>{{ notification.id }}</p> -->
+
+          <form action="{% url "delete_notify" notification.id %}" method="post">
+            {% csrf_token %}
+            <input class="list-btn" type="submit" value="Delete">
+          </form>
+        </div>
+      {% empty %}
+      <div class="referral-card">
+        <div class="close-btn">
+          <i class="bi bi-x-lg"></i>
+        </div>
+        
+        <h3>Info</h3>
+        <p>No Messages</p>
+      </div>
+
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+{% endblock %}

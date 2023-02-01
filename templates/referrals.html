@@ -1,0 +1,22 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block content%}
+<link rel="stylesheet" href="{% static 'css/dashboard2.css' %}">
+
+<section class="dash-card-group">
+  <div class="dash-card dash-card--transaction">
+    <p class="dash-card-heading">Downlines</p>
+    <div class="dash-card-content">
+      <div class="referral-card">
+        <div class="close-btn">
+          <i class="bi bi-x-lg"></i>
+        </div>
+        
+        <h3>Info</h3>
+        <p>No Records Found</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

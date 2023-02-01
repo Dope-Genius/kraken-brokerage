@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content%}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+
+<section class="about-hero">
+  <div class="about-hero-content">
+    <h1>Contact Us Today</h1>
+    <p>Expect a quick response from our team</p>
+  </div>
+</section>
+
+<section class="question padding-x padding-y">
+  <div class="question-text">
+    <div class="general-heading">Questions and answers from our team of experts.
+    </div>
+
+    <p>Welcome to the Customer Service Center, your one-stop-shop to track the progress of your open tickets, retain records of closed issues, search for answers to your questions in the knowledge base and submit questions and feedback directly to our team
+    </p>
+  </div>
+
+  <div class="question-img">
+    <img src="https://leo-brokerage.com/media/faq.png" alt="">
+  </div>
+</section>
+
+<section class="question-group padding-x padding-y">
+  <div class="contact-form">
+    <h2 class="general-heading">
+      Contact us now.
+    </h2>
+
+    <form class="contact-form" action="{% url 'contact' %}" method="POST">
+      {% csrf_token %}
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Name" class="input-text" required><br>
+        <input type="email" name="email" placeholder="Email" class="input-text" required><br>
+      </div>
+      
+      <!-- <input type="text" name="message" placeholder="message" class="input-text" required><br> -->
+
+      <textarea type="text" name="message" class="input-textarea" placeholder="Message" required></textarea> <br><br>
+  
+      <input class="btn btn-circle" type="submit" value="Send Message">
+    </form>
+  </div>
+
+  <div class="contact-text">
+    <h2 class="general-heading">
+      Contacts.
+    </h2>
+
+    <p class="support">Find our contact details below. Don't forget to write us</p>
+
+    <ul class="contact-list">
+      <li>
+        <p class="tag">Address</p>
+        <p class="value">Leeds Brokerage is an international company</p>
+      </li>
+      <li>
+        <p class="tag">Email</p>
+        <p class="value">support@leedsbrokerage.com</p>
+      </li>
+      <li>
+        <p class="tag">Phone</p>
+        <p class="value">+1 (628) 245-7060</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+  <!-- Contact Us -->
+  
+
+{% endblock %}

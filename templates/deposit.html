@@ -1,0 +1,79 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block content%}
+<link rel="stylesheet" href="{% static 'css/dashboard2.css' %}">
+
+<section class="dash-card-group">
+  <div class="dash-card dash-card--form">
+    <p class="dash-card-heading">Deposit Funds</p>
+    <div class="dash-card-content">
+      <div class="form">
+        <div class="form-group">
+          <input type="text" placeholder="Enter Amount">
+
+          <label for="method">Select Method</label>
+          <select name="method" class="payType">
+            <option value="Bitcoin">Bitcoin</option>
+            <option value="Ethereum">Ethereum</option>
+            <option value="USDT">USDT</option>
+          </select>
+        </div>
+      </div>
+      <p class="text instruction">
+        You are provided with a very convenient method of depositing using Bitcoin. Upon your first deposit or transfer to the crypto-transaction section, a single BTC address is created and fixed for you.
+      </p>
+    </div>
+  </div>
+
+  <div class="dash-card  dash-card--wallet">
+    <p class="dash-card-heading">Copy Wallet Address</p>
+    <div class="dash-card-content">
+      <p class="text">Scan The Barcode to make deposit or copy the wallet address below</p>
+      <!-- <h3 class="wallet-add">19qNoqJE51uhjYkTWPjox8Ea6buyjxo2C5</h3> -->
+
+      <input class="wallet-address" type="text" value="19qNoqJE51uhjYkTWPjox8Ea6buyjxo2C5" disabled>
+
+      <button class="copy-btn">Copy Address</button>
+    </div>
+  </div>
+</section>
+
+<script>
+  const payType = document.querySelector('.payType');
+  const wallet = document.querySelector('.wallet-address');
+  payType.addEventListener("change", function(){
+    // alert(this.value)
+    if (this.value == 'Ethereum'){
+      wallet.value = "0x5bFB8fDB26ab05c298aAC42298C8BA7fd23665eF"
+    } else if (this.value == 'USDT'){
+      wallet.value = "0x5bFB8fDB26ab05c298aAC42298C8BA7fd23665eF"
+    } else {
+      wallet.value = "19qNoqJE51uhjYkTWPjox8Ea6buyjxo2C5"
+    }
+  })
+
+  console.log()
+</script>
+
+<script>
+  const copyBtn = document.querySelector('.copy-btn');
+  copyBtn.addEventListener('click', copyAddress);
+
+  function copyAddress() {
+  
+  /* Get the text field */
+  var copyText = document.querySelector(".wallet-address");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+}
+</script>
+{% endblock %}
